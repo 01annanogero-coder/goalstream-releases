@@ -76,7 +76,7 @@ Bridge also talks to (all optional):
 The prebuilt APK is for convenience: it is **compiled with the author's LAN
 address** (`192.168.8.152:8080`) and **contains no API Hub key**. To point it at
 *your* PC you either build the app from source with your IP, or give your PC
-that exact address. Live TV needs your own Hub key — see
+that exact address. Live TV needs your own Hub key and a personal build — see
 [API Hub keys](#api-hub-keys).
 
 ---
@@ -254,8 +254,8 @@ API Hub keys are issued **per user** by Annan Digital Labs at
 not provide, share or publish keys.
 
 - The APK on the releases page is built **without** a Hub key, so Live TV is
-  off by default. To enable it, put your own key in `goalstream/env.json` and
-  build the app yourself.
+  off. The source is private, so Live TV is enabled only in personal builds
+  (maintainer or authorized builders) that add their own key.
 - Keys are compiled into the APK. Never put someone else's key in a build you
   share, and never commit `env.json` or `bridge/.env` (both are git-ignored).
 - If a key leaks — a shared APK, a screenshot, a log — revoke it in the API Hub
@@ -360,8 +360,8 @@ prints request errors there.
 
 ## Notes
 
-- **No API Hub key is shipped in the public APK.** Live TV requires your own
-  key and your own build; see [API Hub keys](#api-hub-keys).
+- **No API Hub key is shipped in the public APK.** Live TV requires a personal
+  build with your own key; see [API Hub keys](#api-hub-keys).
 - The app and bridge source is private; the public repository hosts the README
   and release APKs.
 - The bridge serves **your** LAN. It has no login; keep it off the public
